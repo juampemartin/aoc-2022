@@ -8,9 +8,9 @@ const input = fs
   .filter((l) => Boolean(l));
 
 function part_one() {
-  const Q: number[] = [];
+  const calories: number[] = [];
   for (const elf of input) {
-    Q.push(
+    calories.push(
       elf
         .split("\n")
         .map((n) => parseInt(n))
@@ -19,14 +19,14 @@ function part_one() {
   }
 
   return {
-    RES: Q.sort((a, b) => a - b)[Q.length - 1],
+    RES: calories.sort((a, b) => a - b)[calories.length - 1],
   };
 }
 
 function part_two() {
-  const Q: number[] = [];
+  const calories: number[] = [];
   for (const elf of input) {
-    Q.push(
+    calories.push(
       elf
         .split("\n")
         .map((n) => parseInt(n))
@@ -35,11 +35,8 @@ function part_two() {
   }
 
   return {
-    RES: Q.sort((a, b) => a - b)
+    RES: calories.sort((a, b) => a - b)
       .slice(-3)
       .reduce((acc, value) => acc + value),
   };
 }
-
-console.log(part_one())
-console.log(part_two())
