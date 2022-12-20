@@ -64,5 +64,3 @@ function part_two(): number {
 
   return score;
 }
-
-console.log(part_two())
